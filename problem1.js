@@ -5,9 +5,9 @@
 //💡যে মন ইনপুট যদি 10 হয় তাহলে আউটপুট হবে ( 10 * 120) - ( 500 + (8 * 50) ) = 300
 
 
-function ticketPrice(ticket){
+function calculateMoney(ticketCount){
 
-    if(ticket < 0){
+    if(ticketCount < 0){
         return "Invalid Number"
     }
 
