@@ -12,11 +12,11 @@ function calculateMoney(ticketCount){
     }
 
     else{
-        return (ticket * 120) -(500 + (8*50))
+        return (ticketCount * 120) -(500 + (8*50))
     }
   
 }
 
-console.log(ticketPrice(10))
-console.log(ticketPrice(1055))
-console.log(ticketPrice(-130))
+console.log(calculateMoney(10))
+console.log(calculateMoney(1055))
+console.log(calculateMoney(-130))
