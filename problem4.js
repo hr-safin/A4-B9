@@ -1,12 +1,24 @@
 //
 
 function password(obj) {
-    //write your code here
-    let password = ""
-    for(let value in obj){
-         console.log(obj.siteName)
-    }
-}
+  if (
+    !obj.hasOwnProperty("name") ||
+    typeof obj.name !== "string" ||
+    !obj.hasOwnProperty("birthYear") ||
+    typeof obj.birthYear !== "number" ||
+    !obj.hasOwnProperty("siteName") ||
+    typeof obj.siteName !== "string" ||
+    Number(obj.birthYear).toString().length !== 4
+  ) {
+      return "invalid";
+  }
+  const password = obj.siteName + "#" + obj.name + "@" + obj.birthYear;
 
-//{ name: “kolimuddin” , birthYear: 1999 , siteName: “google” }
-password({name : "kolimuddin", birthYear : 1999, siteName : "Google" })
+  return password;
+}
+console.log(
+  password({ name: "kolimuddin", birthYear: 1999, siteName: "Google" })
+);
+console.log(
+  password({ name: "kolimuddin", birthYear: 199, siteName: "Google" })
+);
